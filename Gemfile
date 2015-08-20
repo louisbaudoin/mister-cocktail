@@ -44,3 +44,15 @@ group :development, :test do
 end
 
 gem 'rspec-rails', group: [ :test ]
+
+#Heroku
+
+gem 'rails_12factor', group: :production
+gem 'puma',           group: :production
+
+
+#gem front end
+
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'font-awesome-sass', '~> 4.2.0'
+gem 'simple_form'
