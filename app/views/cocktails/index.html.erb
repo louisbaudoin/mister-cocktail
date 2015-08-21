@@ -1,16 +1,24 @@
+<div class="container text-center">
 
   <h1>Tous mes cocktails</h1>
-  <ul>
+  <br>
+  <br>
+
     <% @cocktails.each do |cocktail| %>
-        <li><%= cocktail.name%>
-          <ul>
-              <% cocktail.ingredients.each do |ingredient|%>
-              <li><%= ingredient.name%></li>
-              <%end%>
-          </ul>
+        <h2><%= cocktail.name%> </h2>
+        <h4><% cocktail.ingredients.each do |ingredient|%>
+              <%= ingredient.name + "-"%>
+              <%end%></h4>
+        <p> <%=link_to "Details", cocktail_path(cocktail) %></p>
         </li>
     <%end%>
+  <br>
+  <br>
+  <br>
 
-  </ul>
+<span class="glyphicon glyphicon-glass"></span>
+<span class="glyphicon glyphicon-glass"></span>
+<span class="glyphicon glyphicon-glass"></span>
+<span class="glyphicon glyphicon-glass"></span>
 
-  <%=link_to "Add a cocktail", new_cocktail_path %></li>
+</div>

@@ -1,2 +1,21 @@
-<h1>Dose#new</h1>
-<p>Find me in app/views/dose/new.html.erb</p>
+<h1 class="text-center"><%="Adding a dose to #{@cocktail.name}"%></h1>
+
+<div class="container text-center">
+
+  <ul>
+  <% @cocktail.doses.each do |dose| %>
+    <li><%=dose.description%> (<%=dose.ingredient.name%>) </li>
+  <%end%>
+  </ul>
+
+  <br>
+  <br>
+  <br>
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :ingredient_id, collection: @ingredients.all, prompt: "choose an ingredient"%>
+    <%= f.input :description, placeholder: "description"%>
+    <%= f.button :submit, class: "btn btn-primary"%>
+   <!--  //rerouter vers create (si new, par defaut quand on submit, on renverra sur create) -->
+  <%end%>
+</div>

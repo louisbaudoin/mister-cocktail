@@ -1,9 +1,9 @@
-<h1>Let's create a cocktaiiiiiiiil</h1>
+<h1 class ="text-center">Let's create a cocktaiiiiiiiil</h1>
 
-
-<%= simple_form_for [@restaurant, @review] do |f| %>
-  <%= f.input :content, placeholder: "your feedback"%>
-  <%= f.input :rating, collection: [0,1,2,3,4,5], prompt: "rating"%>
-  <%= f.button :submit%>
- <!--  //rerouter vers create (si new, par defaut quand on submit, on renverra sur create) -->
-<% end %>
+<div class="container text-center">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name, placeholder: "Name of your cocktail"%>
+    <%= f.button :submit%>
+   <!--  //rerouter vers create (si new, par defaut quand on submit, on renverra sur create) -->
+  <% end %>
+</div>
