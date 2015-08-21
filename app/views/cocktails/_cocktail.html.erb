@@ -1,12 +1,17 @@
-_cocktail.html.erb
+
 
 
 <div class="card">
-  <div class="card-header">
-    <%= image_tag "LAND.JPG" %>
-  </div>
-  <div class="card-body">
-    <h2><%= cocktail.name %></h2>
-    <p class="recipe"><%= cocktail.name %></p>
-  </div>
+  <span class="card-bg" style="-"></span>
+  <span class="card-shadow"></span>
+  <span class="card-description"><h2><%=cocktail.name%></h2></span>
+  <span class="card-text">
+    <h5>
+      <%cocktail.ingredients.each do |ing| %></p>
+      <%=ing.name + "  "%>
+      <%end%>
+    </h5>
+  </span>
+  <a href="#" class="card-link"></a>
 </div>
+

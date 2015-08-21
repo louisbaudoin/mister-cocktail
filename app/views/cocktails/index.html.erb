@@ -1,8 +1,17 @@
-<div class="container text-center">
 
-  <h1>Tous mes cocktails</h1>
-  <br>
-  <br>
+<h1 class="text-center">Tous mes cocktails</h1>
+<br>
+<br>
+
+
+
+  <div class="row">
+    <% @cocktails.each do |c| %>
+    <div class="col-xs-12 col-sm-4">
+      <%= render "cocktail", cocktail: c %>
+    </div>
+    <% end %>
+  </div>
 
     <% @cocktails.each do |cocktail| %>
         <h2><%= cocktail.name%> </h2>
@@ -22,3 +31,4 @@
 <span class="glyphicon glyphicon-glass"></span>
 
 </div>
+
