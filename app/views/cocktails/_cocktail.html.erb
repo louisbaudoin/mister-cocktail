@@ -1,17 +1,16 @@
 
 
-
 <div class="card">
-  <span class="card-bg" style="-"></span>
+  <span class="card-bg" style="background-image: url(<%=cocktail.picture%>"></span>
   <span class="card-shadow"></span>
   <span class="card-description"><h2><%=cocktail.name%></h2></span>
   <span class="card-text">
     <h5>
-      <%cocktail.ingredients.each do |ing| %></p>
+      <%cocktail.ingredients.each do |ing| %>
       <%=ing.name + "  "%>
       <%end%>
     </h5>
   </span>
-  <a href="#" class="card-link"></a>
+  <%=link_to "", cocktail_path(cocktail), class: "card-link" %>
 </div>
 

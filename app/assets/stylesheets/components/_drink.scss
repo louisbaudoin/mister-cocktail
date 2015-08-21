@@ -1,0 +1,42 @@
+.drink {
+  background-color: #F7F7F7;
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &-premier {
+    position: absolute;
+    left: 50px;
+    font-size: 50px;
+  }
+
+  &-premier h2 {
+    font-size: 50px;
+    color: #454545;
+  }
+
+  &-premier h3 {
+  font-size: 35px;
+  color: #BCBCBC;
+  }
+
+  &-description {
+    position: absolute;
+    font-size: 35px;
+    color: #BCBCBC;
+    left: 80px;
+    top: 100px;
+  }
+
+  &-link {
+  position: absolute;
+  font-size: 20px;
+  color: #BCBCBC;
+  bottom: 100px;
+  left: 80px;
+  }
+
+}
+

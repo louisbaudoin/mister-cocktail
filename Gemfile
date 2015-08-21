@@ -47,6 +47,11 @@ end
 #figaro
 gem 'figaro'
 
+
+# Paperclip
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
+
 #Heroku
 
 gem 'rails_12factor', group: :production

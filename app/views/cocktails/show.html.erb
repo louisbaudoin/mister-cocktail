@@ -1,25 +1,47 @@
-<div class="container text-center">
+  <br>
+  <br>
 
-  <h1><%= @cocktail.name  %></h1>
+
+  <%= render "banner", cocktail: @cocktail %>
+
+  <h1 class = "text-center"><span class="glyphicon glyphicon-glass"></span>        <%= @cocktail.name  %>         <span class="glyphicon glyphicon-glass"></span></h1>
 
   <br>
   <br>
   <br>
-
-  <div class = "list text-center">
 
     <% @cocktail.doses.each_with_index do |dose, index| %>
-      <h3><%= "#{index + 1} - #{dose.ingredient.name} ----> #{dose.description}" %>
-        <%=link_to "Delete", cocktail_dose_path(@cocktail,dose.id), method: :delete%></h3>
-      <br>
-      <br>
-      <br>
+
+
+    <div class="list-drinks">
+
+      <div class="drink">
+        <ul class ="drink-premier list-inline">
+          <li><h2 class="drink-number"><%= "#{index + 1}"%></h2></li>
+          <li><h3><%= "#{dose.ingredient.name}"%> </h3></li>
+        </ul>
+
+          <span class="drink-description">
+            <h3><%= "#{dose.description}" %></h3>
+          </span>
+        </span>
+
+        <br>
+        <br>
+
+        <span class="drink-link">
+          <%=link_to "Delete", cocktail_dose_path(@cocktail,dose.id), method: :delete%>
+        </span>
+
+        <br>
+        <br>
+        <br>
+      </div>
+
     <%end%>
 
   </div>
 
 
-  <h4><%=link_to "Add a dose", new_cocktail_dose_path(@cocktail) %></h4>
+  <h4 class = "text-center"><%=link_to "Add a dose", new_cocktail_dose_path(@cocktail) %></h4>
 
-
-</div>

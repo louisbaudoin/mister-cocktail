@@ -1,0 +1,15 @@
+
+.container {
+  background-color: #08E8DE;
+  border-radius: 8px;
+  height: 300px;
+  position: relative;
+  width: 600px;
+&-name {
+  position:absolute;
+  top: 50px;
+  width:  300px;
+  left: 150px;
+
+}
+}
